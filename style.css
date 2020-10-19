@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+
+/* ========================================
+	フロートの解除
+========================================= */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* ========================================
+    ラッパー
+========================================= */
+#header_inner,#mainimage,#about,#work_inner,#Contact{
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+}
+/* ========================================
+	全体設計
+========================================= */
+body {
+	color:#000;
+	font-size: 12px;
+	font-family: "メイリオ", Meiryo;
+	background-color: #fbf7ed;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a{text-decoration: none;color: white}
+a:hover {color: #f6ac4d;opacity: 0.9;cursor: pointer;}
+h1{font-size: 30px;font-weight: 900;}
+h2{font-size: 40px;font-weight: 900; font-family: 'ヒラギノ角ゴ StdN W8'
+'Hiragino Kaku Gothic StdN'; margin-left: 30px;}
+h3{font-size: 18px;font-weight: 100;}
+
+/* ========================================
+    header
+========================================= */
+header{
+  width: 100%;
+  height: 95px;
+  background-color: #59a0a5;
+  color: white;
+}
+h1{
+  float: left;
+  padding-top: 18px;
+  line-height: 1.1;
+  }
+nav{
+  float: right;
+  font-size: 24px;
+}
+nav li{
+  float: left;
+  margin-left: 30px;
+  margin-top: 60px;
+}
+
+
+/* ========================================
+    mainimage
+========================================= */
+div#mainimage{
+  margin: 30 auto 60;
+}
+
+/* ========================================
+    about
+========================================= */
+
+div#about h2{
+  width: 130px;
+  border-bottom: 10px solid #fff;
+  line-height: 0.9;
+  padding-left: 24px;
+  position: relative;
+}
+div#about h2::after{
+  content: '';
+  width: calc(100%);
+  height: calc(100%);
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  border-bottom: rgba(246,172,77,0.9) solid 10px;
+}
+div#about dl{
+  width: 960px;
+  position: relative;
+}
+div#about dt{
+  width: 526px;
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 66px;
+  margin-bottom: 170px;
+}
+div#about dd{
+  position: absolute;
+  top:60px;
+  right: 55px;
+}
+
+/* ========================================
+    work
+========================================= */
+div#work{
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+  background-color: #c0d8da;
+}
+div#work h2{
+  width: 110px;
+  line-height: 0.9;
+  padding-left: 20px;
+  border-bottom: 10px solid white;
+  position: relative;
+  float: left;
+}
+div#work h2::after{
+  content: '';
+  width: calc(100%);
+  height: calc(100%);
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  border-bottom: rgba(89,160,165,0.9) solid 10px;
+} 
+div#work p{
+  float: left;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+div#work li{
+  float: left;
+  margin-left: 52px;
+}
+div#work_inner{
+  position: relative;
+}
+dl#hn{
+  position: absolute;
+  top: 450px;
+  left: 78px;
+  }
+dl#hn dt,dl#hn dd{
+  float: left;
+}
+dl#hn dt#hn1{
+  padding-right: 3px;
+  
+}
+dl#hn dt#hn2{
+  margin-top: 18px;
+  margin-right: 280px;
+  
+}
+dl#hn dt#hn3{
+  margin-left: 106px;
+  margin-top: 3px;
+}
+dl#hn dd{
+  margin-top: 104px;
+  margin-left: 10px;
+}
+
+/* ========================================
+    contact
+========================================= */
+div#contact h2{
+  border-bottom: white 10px solid;
+  width: 165px;
+  padding-left: 24px;
+  line-height: 0.9;
+  position: relative;
+  margin-top: 30px;
+}
+div#contact h2::after{
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  border-bottom: 10px solid #f6ac4d;
+  width: calc(100%);
+  height: calc(100%);
+}
+div#contact section{
+  background-color: white;
+  width: 850px;
+  height: 130px;
+  margin: 20px 40px;
+}
+div#contact p#mail{
+  text-align:center;
+  line-height: 130px;background: url(images/mail.png) no-repeat 240px center ;
+  margin-left: 80px;
+}
+div#contact p a{
+  color:black;
+}
+div#contact p a:hover{
+  color: #f6ac4d;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* ========================================
+    fooder
+========================================= */
+footer{
+  margin-top: 40px;
+  width: 100%;
+  height: 50px;
+  background-color: #59a0a5;
+}
+footer p{
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 10px;
+}
+
+
+
+/* ========================================
+  JQuery
+========================================= */
+.pagetop{
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  font-size: 200%;
+}
+.pagetop{
+  background: #666;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.pagetop a{
+  text-align: center;
+  line-height: 50px;
+  
+}
+.pagetop:hover{
+  background: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pagetop a:hover{
+  
+  color:white;
+}
+
+/* ========================================
+    my_desigh
+========================================= */
+#kanpu{
+  width: 960px;
+  height: 1260px;
+  margin: 60 auto 60;
+  padding: 60px 20px;
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+#kanpu p{
+  margin-left: 72px;
+}
+#kanpu ul li{
+  padding: 0 10px ;
+  width:auto;
+}
+#kanpu ul{
+  width: 830px;
+  margin: 0 auto;
+  display:flex;
+}
+div#my{
+  width: 500px;
+  height: 50px;
+  margin: 0 auto;
+  padding-left: 200px;
+  padding-top: 20px;
+}
+#my a{
+  color: black;
+  font-size: 24px;
+}
+#my a:hover {
+  color: #f6ac4d;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+div#word{
+  width: 803px;
+  margin: 0 auto ;
+}
+#word p a{
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+#word p a:hover{
+  color: orange;
+  cursor: pointer;
+  font-weight: 500;
+}
